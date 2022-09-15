@@ -1,0 +1,154 @@
+<div class="background">
+  <div class="pr-title">
+  <h1>AVOCADO</h1>
+  <h2>Registrarse</h2>
+  </div>
+  <div class="box-content">
+    <div class="box">
+      <h2 class="h2" >¿Eres nuevo?</h2>
+      <div class="texto">Registrate a nuestra pagina.
+          Tendras acceso a todas las funcionalidades desde el prime dia.</div>
+
+
+      <div class="Box">
+          <form [formGroup]="RegisterForm" (ngSubmit)="Registered();">
+
+
+              <label class="label" for="Name">Nombre(s):</label>
+              <input class="input" type="text" name="Name" value="" placeholder="Ingrese su(s) nombre(s)" formControlName="name">
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('name')?.touched && RegisterForm.get('name')?.errors?.['required']">
+                  El campo es requerido*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('name')?.touched && RegisterForm.get('name')?.errors?.['maxlength']">
+                  El nombre no puede tener mas de 35 caracteres*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('name')?.touched && RegisterForm.get('name')?.errors?.['minlength']">
+                  El nombre debe tener al menos 3 caracteres*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('name')?.touched && RegisterForm.get('name')?.errors?.['pattern']">
+                  Utilice solo letras y un espaciado por nombre*
+              </small>
+              <br [hidden] =
+                  "RegisterForm.get('name')?.touched && RegisterForm.get('name')?.errors?.['required'] ||
+                  RegisterForm.get('name')?.touched && RegisterForm.get('name')?.errors?.['maxlength'] ||
+                  RegisterForm.get('name')?.touched && RegisterForm.get('name')?.errors?.['minlength'] ||
+                  RegisterForm.get('name')?.touched && RegisterForm.get('name')?.errors?.['pattern']">
+
+
+              <label class="label" for="Apellido">Apellido(s):</label>
+              <input class="input" type="text" name="Apellido" value="" placeholder="Ingrese su(s) apellido(s)" formControlName="lastname">
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('lastname')?.touched && RegisterForm.get('lastname')?.errors?.['required']">
+                  El campo es requerido*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('lastname')?.touched && RegisterForm.get('lastname')?.errors?.['maxlength']">
+                  El nombre no puede tener mas de 35 caracteres*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('lastname')?.touched && RegisterForm.get('lastname')?.errors?.['minlength']">
+                  El nombre debe tener al menos 3 caracteres*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('lastname')?.touched && RegisterForm.get('lastname')?.errors?.['pattern']">
+                  Utilice solo letras y un espaciado por nombre*
+              </small>
+              <br [hidden] =
+                  "RegisterForm.get('lastname')?.touched && RegisterForm.get('lastname')?.errors?.['required'] ||
+                  RegisterForm.get('lastname')?.touched && RegisterForm.get('lastname')?.errors?.['maxlength'] ||
+                  RegisterForm.get('lastname')?.touched && RegisterForm.get('lastname')?.errors?.['minlength'] ||
+                  RegisterForm.get('lastname')?.touched && RegisterForm.get('lastname')?.errors?.['pattern']">
+
+
+              <label class="label" for="Email">Correo:</label>
+              <input class="input" type="text" name="Email" value="" placeholder="Ingrese su correo" formControlName="email">
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('email')?.touched && RegisterForm.get('email')?.errors?.['required']">
+                  El campo es requerido*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('email')?.touched && RegisterForm.get('email')?.errors?.['pattern']">
+                  El correo no es valido*
+              </small>
+              <br [hidden] = "
+                  RegisterForm.get('email')?.touched && RegisterForm.get('email')?.errors?.['required'] ||
+                  RegisterForm.get('email')?.touched && RegisterForm.get('email')?.errors?.['pattern']">
+
+
+              <label class="label" for="Direccion">Direccion:</label>
+              <input class="input" type="text" name="Direccion" value="" placeholder="Ingrese su direccion" formControlName="direction">
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('direction')?.touched && RegisterForm.get('direction')?.errors?.['required']">
+                  El campo es requerido*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('direction')?.touched && RegisterForm.get('direction')?.errors?.['maxlength']">
+                La direccion no puede ser tan grande*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('direction')?.touched && RegisterForm.get('direction')?.errors?.['minlength']">
+                  La direccion es muy pequeña*
+              </small>
+              <br [hidden] =
+                  "RegisterForm.get('direction')?.touched && RegisterForm.get('direction')?.errors?.['required'] ||
+                  RegisterForm.get('direction')?.touched && RegisterForm.get('direction')?.errors?.['maxlength'] ||
+                  RegisterForm.get('direction')?.touched && RegisterForm.get('direction')?.errors?.['minlength']">
+
+
+              <label class="label" for="Contraseña">Contraseña:</label>
+              <input class="input" type="password" name="Contraseña" value="" placeholder="Ingrese su contraseña" formControlName="password">
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('password')?.touched && RegisterForm.get('password')?.errors?.['required']">
+                  El campo es requerido*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('password')?.touched && RegisterForm.get('password')?.errors?.['minlength']">
+                  La contraseña debe tener al menos 8 caracteres*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('password')?.touched && RegisterForm.get('password')?.errors?.['maxlength']">
+                  La contraseña no debe superar los 20 caracteres*
+              </small>
+              <br [hidden] = "
+                  RegisterForm.get('password')?.touched && RegisterForm.get('password')?.errors?.['required'] ||
+                  RegisterForm.get('password')?.touched && RegisterForm.get('password')?.errors?.['minlength'] ||
+                  RegisterForm.get('password')?.touched && RegisterForm.get('password')?.errors?.['maxlength']">
+
+
+              <label class="label" for="Contraseña-Repeat">Repetir contraseña:</label>
+              <input class="input" type="password" name="Contraseña-Repeat" value="" placeholder="Repita su contraseña" formControlName="RepeatPassword">
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('RepeatPassword')?.touched && RegisterForm.get('RepeatPassword')?.errors?.['required']">
+                  El campo es requerido*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('RepeatPassword')?.touched && RegisterForm.get('RepeatPassword')?.errors?.['minlength']">
+                  La contraseña debe tener al menos 8 caracteres*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('RepeatPassword')?.touched && RegisterForm.get('RepeatPassword')?.errors?.['maxlength']">
+                  La contraseña no debe superar los 20 caracteres*
+              </small>
+              <small class="small-error"
+                  *ngIf=" RegisterForm.get('RepeatPassword')?.value != RegisterForm.get('password')?.value">
+                  Las contraseñas no coinciden*
+              </small>
+              <br [hidden] = "
+                  RegisterForm.get('RepeatPassword')?.touched && RegisterForm.get('RepeatPassword')?.errors?.['required'] ||
+                  RegisterForm.get('RepeatPassword')?.touched && RegisterForm.get('RepeatPassword')?.errors?.['minlength'] ||
+                  RegisterForm.get('RepeatPassword')?.touched && RegisterForm.get('RepeatPassword')?.errors?.['maxlength'] ||
+                  RegisterForm.get('RepeatPassword')?.value != RegisterForm.get('password')?.value">
+
+              <button class="button" [disabled]="!RegisterForm.valid">Registrarse</button>
+              <br/>
+              <div class='Register-form'> <p class="Register-text">Ya tienes cuenta? <a class="text" routerLink="/auth/login">Ingresa aqui!</a></p></div>
+          </form>
+
+      </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="hr-card" *ngIf="data"  routerLink="/app/home/add/{{data.id}}">
+    <div class = "hr-card__img">
+        <img src="{{data.avatar}}" alt="">
+
+
+    </div>
+    <div  class = "hr-card__info">
+        <h2>{{data.Name }}</h2>
+        <h4>price:{{data.Price}} Pound</h4>
+        <p>Description:{{data.Desc}}</p>
+    </div>
+</div>

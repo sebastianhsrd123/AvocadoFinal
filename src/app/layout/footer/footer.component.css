@@ -1,0 +1,15 @@
+.hr-footer{
+    height:calc(80px - 1rem);
+    width:100%;
+    padding:0.5rem 1rem;
+    background: black;
+    text-align: center;
+    font-size: 16px;
+    display:flex;
+    font-family: sans-serif;
+    color: white;
+    align-items:center;
+    justify-content:center;
+    font-weight: 500;
+    font-style: italic;
+}

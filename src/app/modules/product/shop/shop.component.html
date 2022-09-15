@@ -1,0 +1,74 @@
+<div>
+<div class="title">
+  <h1>Finalizar compra para {{User.name}}</h1>
+</div>
+
+<div  class="tabla">
+  <table>
+      <tr>
+          <th>#</th>
+          <th>Producto</th>
+          <th>Valor</th>
+          <th>Cantidad</th>
+          <th>Valor total</th>
+          <th>Eliminar</th>
+      </tr>
+      <tr *ngFor ="let compras of compra; let i= index">
+        <td>{{i+1}}</td>
+        <td>{{compras.Prod}}</td>
+        <td>${{compras.Valor_cu | number}} COP</td>
+        <td>{{compras.unidad}} {{compras.Peso}}</td>
+        <td>${{compras.Valor_total | number}}COP</td>
+        <td><a>Eliminar</a></td>
+      </tr>
+      <tr>
+        <th>Total</th>
+        <th> ${{total | number}}COP </th>
+        <th>  </th>
+        <th>  </th>
+        <th>    </th>
+        <th></th>
+    </tr>
+    </table>
+
+    <div class="datos">
+      <div>
+        <h2>Datos del Cliente</h2>
+        <i><img src="https://cdn.icon-icons.com/icons2/624/PNG/512/User-80_icon-icons.com_57249.png"
+          style="heigth: 30px; width:30px" alt=""></i>Nombre: {{User.name}}<br>
+        <i><img src="https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564396-mail_81524.png"
+          style="heigth: 30px; width:30px" alt=""></i>Correo: {{User.email}}<br>
+        <i><img src="https://cdn.icon-icons.com/icons2/2959/PNG/512/pin_placeholder_location_map_marker_geolocation_address_icon_185987.png"
+          style="heigth: 30px; width:30px" alt=""></i>Direccion de entrega: {{User.direction}}<br>
+      </div>
+      <div>
+        <h2>Metodos de pago</h2>
+         <input (click)="pago_credito;" type="radio" name="empleoactual" value="Credito">Tarjeta de credito
+         <i><img src="https://cdn.icon-icons.com/icons2/2063/PNG/512/credit_card_payment_finance_credit_card_icon_124664.png"
+          style="heigth: 40px; width:40px" alt=""></i><br>
+         <input (click)="pago_debito;" type="radio" name="empleoactual" value="Debito">Tarjeta debito
+         <i><img src="https://cdn.icon-icons.com/icons2/2072/PNG/512/accept_agreement_card_check_credit_internet_security_icon_127041.png"
+          style="heigth: 40px; width:40px" alt=""></i><br>
+         <input  (click)="pago_efectivo;" type="radio" name="empleoactual" value="Efectivo">Efectivo
+         <i><img src="https://cdn.icon-icons.com/icons2/1430/PNG/256/dollars_98561.png"
+          style="heigth: 40px; width:40px" alt=""></i><br>
+         <input (click)="pago_transferencia;" type="radio" name="empleoactual" value="Transferencia">Transferencia
+         <i><img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/bank_transfer_icon_137913.png"
+          style="heigth: 40px; width:40px" alt=""></i><br>
+      </div>
+
+    </div>
+
+
+    <div class="crear">
+      <form (ngSubmit)="Registered();">
+    <button class="hr-btn"> Finalizar compra</button>
+  </form>
+    </div>
+
+</div>
+
+
+</div>
+
+

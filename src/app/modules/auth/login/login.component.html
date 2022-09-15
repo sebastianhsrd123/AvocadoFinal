@@ -1,0 +1,60 @@
+
+<div class="background">
+  <small class="small-error" style="width:100%; margin:0; padding:0;"
+  *ngIf=" show">Las credenciales suministradas son incorrectas*
+  </small>
+  <div class="pr-title">
+
+
+  <h1>AVOCADO</h1>
+  <h2>Iniciar Sesion</h2>
+  </div>
+
+  <div class="box-content">
+    <div class="box">
+  <h2 class="h2" >Bienvenido</h2>
+
+  <div class="texto">Es un gusto tenerte con nosotros.
+      Por favor ingresa tu correo y contraseña para continuar.</div>
+
+
+
+  <div class="Box">
+
+  <form [formGroup]="loginForm" (ngSubmit)="authenticate();">
+  <label class="label" for="Email">Correo:</label>
+  <br/>
+  <input class="input" type="text" name="Email" value="" placeholder="Ingrese su correo" formControlName="email">
+
+  <small class="small-error"
+  *ngIf=" loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['required']">El campo es requerido*
+  </small>
+  <small class="small-error"
+  *ngIf=" loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['pattern']">El correo no es valido*
+  </small>
+  <br [hidden] = " loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['required'] || loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['pattern']">
+
+  <label class="label" for="Contraseña">Contraseña:</label>
+  <br/>
+  <input class="input" type="password" name="Contraseña" value="" placeholder="Ingrese su contraseña" formControlName="password">
+  <small class="small-error"
+  *ngIf=" loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']">El campo es requerido*
+  </small>
+  <small class="small-error"
+  *ngIf=" loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['minlength']">La contraseña debe tener al menos 8 caracteres*
+  </small>
+  <small class="small-error"
+  *ngIf=" loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['maxlength']">La contraseña no debe superar los 20 caracteres*
+  </small>
+  <br [hidden] = " loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required'] || loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['minlength'] || loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['maxlength']">
+  <small class="small"><a class='pasword-form' href="#">Olvide mi contraseña?</a></small>
+  <br/>
+  <button type="submit" class="button" [disabled]="!loginForm.valid">Iniciar Sesion</button>
+  <br/>
+  <div class='Register-form'> <p class="Register-text">O deseas <a class="text" routerLink="/auth/register">Registrarte</a></p></div>
+  </form>
+
+  </div>
+  </div>
+  </div>
+</div>

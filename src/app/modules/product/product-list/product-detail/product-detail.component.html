@@ -1,0 +1,50 @@
+<div class="container" *ngIf="this.Product[0] ">
+  <div class="titles">
+    <h2> Detalles del Producto {{this.Product[0].Name}}</h2>
+  </div>
+  <div class="images">
+    <img src="{{this.Product[0].avatar}}" alt="">
+    <div class="buy">
+      <h3>
+        {{this.Product[0].Desc}}
+      </h3>
+      <hr>
+      <div class="price">
+      <button class="btn btn-primary" (click)="calllB();"> Lbs</button>
+      <button class="btn btn-primary " (click)="callkg();"> Kg</button>
+      <button class="btn btn-primary " (click)="callB();"> Bulto</button>
+      <hr>
+      <h5>{{this.tipo | number}}$ COP</h5>
+      <hr>
+      <button class="btn btn-primary hr-btn" (click)="Upud();"><h5 class="centrar">+</h5></button>
+      <h5 class="centrar">{{unidad}} {{w}}</h5>
+      <button class="btn btn-primary hr-btn" (click)="Downud();"><h5 class="centrar">-</h5></button>
+      </div>
+      <div class="add" *ngIf="!sesion; else Sesion">
+        <button class="btn btn-primary hr-btn2" routerLink="/auth/login" >agregar al carrito
+          <span><img src="https://cdn-icons-png.flaticon.com/512/1458/1458274.png" alt=""></span>
+        </button>
+      </div>
+  </div>
+
+
+  </div>
+
+
+</div>
+<div class="row">
+  <div class="col-12">
+      <h2>Products</h2>
+  </div>
+
+  <app-card-product  [data]="product" *ngFor="let product of products;" (click)="refresh();"  class="col-12 col-md-4 col-xl-3"></app-card-product>
+
+</div>
+
+<ng-template #Sesion>
+  <div class="add">
+    <button class="btn btn-primary hr-btn2" (click)="carrito();" >agregar al carrito
+      <span><img src="https://cdn-icons-png.flaticon.com/512/1458/1458274.png" alt=""></span>
+    </button>
+  </div>
+</ng-template>

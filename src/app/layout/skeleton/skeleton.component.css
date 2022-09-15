@@ -1,0 +1,5 @@
+.hr-skeleton-content{
+    min-height:calc(100hv - 80px - 60px);
+    color:whitesmoke;
+    background:rgba(241, 215, 212, 0.688);
+}

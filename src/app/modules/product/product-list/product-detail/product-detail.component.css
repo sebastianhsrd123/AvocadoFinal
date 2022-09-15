@@ -1,0 +1,118 @@
+h2, h3 {
+  margin:auto;
+  color:black;
+  font-family: sans-serif;
+  font-weight:bold;
+  align-content: justify;
+}
+hr{
+  border: 1px solid black;
+}
+
+img{
+
+  background-size: cover;
+  width: 35%;
+  height: 300px;
+  margin:auto;
+  margin-top: 0;
+  border: 1px solid black;
+}
+
+.titles{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  margin:auto;
+}
+.container{
+  margin:0;
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.images{
+  display: flex;
+  width: 100%;
+  height: 400px;
+}
+
+.btn{
+    background:#777978;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    opacity: 0.8;
+    border-color: rgb(13, 14, 13);
+
+}
+.btn-primary{
+    background:forestgreen;
+    opacity: 1;
+    border-color: whitesmoke;
+}
+.price{
+  width:500px;
+  display: flex;
+  flex-direction: row;
+
+}
+h5{
+  margin: auto;
+  color:black;
+  margin: auto;
+}
+.hr-btn{
+  background:forestgreen;
+  padding: 2px 5px;
+
+  opacity: 0.8;
+  border-color: rgb(13, 14, 13);
+  height:25px;
+  margin: auto;
+
+}
+.hr-btn:active{
+
+  opacity: 1;
+  border: 0;
+  border-color: none;
+
+
+}
+
+.centrar{
+  padding-bottom: 5px!;
+}
+
+
+.hr-btn2{
+  background:forestgreen;
+  padding: 2px 5px;
+  opacity: 0.8;
+  border-color: rgb(13, 14, 13);
+  height:70px;
+  margin: auto;
+
+}
+.add{
+  padding: 40px 10px 30px 10px;
+  display:flex;
+}
+.hr-btn2:active{
+
+  opacity: 1;
+  border: 0;
+  border-color: none;
+
+
+}
+span img{
+  border:none;
+  margin:0 20px;
+  width: 30px;
+  height: 30px;
+}

@@ -1,0 +1,201 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+
+}
+h2 {
+  margin-left:10%;
+  padding-top: 20px;
+  font-weight:bolder;
+  color:rgba(78, 74, 74, 0.845);
+  height: 75px;
+  width: 250px;
+  position: relative;
+  text-align:center;
+
+
+}
+.background{
+  position:absolute;
+  top:0;
+  height: 100vh;
+  width: 100%;
+  background-image: url('https://s1.1zoom.me/b5050/375/391224-svetik_2560x1440.jpg');
+  background-size: cover;
+}
+
+.texto{
+  margin-left:10%;
+
+  font-weight:lighter;
+  color:rgba(78, 74, 74, 0.845);
+  font-size: 14px;
+  height: 70px;
+  width: 250px;
+  padding: 0;
+  position: relative;
+  text-align:justify;
+
+
+
+
+}
+.pr-title{
+  display:flex;
+
+  width: 100%;
+  flex-direction: column;
+  height: 100px;
+}
+.pr-title h1{
+  margin:auto;
+  color: rgb(0, 0, 0);
+  text-shadow: -1px 0px 3px rgba(255, 255, 255, 0.867);
+  font-weight: bold;
+}
+.pr-title h2{
+  margin:auto;
+  width: 209px;
+  color: rgb(0, 0, 0);
+  text-shadow: -1px 0px 3px rgba(255, 255, 255, 0.867);
+  margin-top: -20px;
+}
+.box{
+
+  margin-left: 35%;
+  margin-right: 34%;
+  box-shadow: rgba(255, 255, 255, 0.836) 0px -1px 35px 4px;
+  background-color: rgb(255, 255, 255);
+
+
+}
+.box-content{
+
+  width:100%;
+
+}
+label {
+  padding-top: 20px;
+  height: 65px;
+  width: 100px;
+  font-weight:bolder;
+  position: relative;
+  align-items: center;
+  padding: 30px, 20px;
+  margin-left:10%;
+
+
+}
+
+input{
+  height: 45px;
+  width: 230px;
+  position: relative;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  border-width: 0px;
+  border-color: #ffffff;
+  background-color: #e8e6e6;
+  color: #000000;
+  border-style: solid;
+  border-radius: 0px;
+  box-shadow: 6px 3px 13px rgba(0,0,0,.35);
+  text-shadow: -1px 0px 3px rgba(0, 0, 0, 0.449);
+
+}
+input:focus {
+  outline:none;
+  background-color: #e7f2fd;
+  text-shadow: -1px 0px 3px rgba(0, 0, 0, 0);
+}
+
+.small{
+
+  height: 45px;
+  width: 250px;
+  position: relative;
+  padding-left: 110px;
+
+}
+
+
+.small-error{
+
+  height: 15px;
+  width: 328px;
+  position: relative;
+  margin-left:10%;
+  color: #e7f2fd;
+  font-size: 10px;
+  display:flex;
+  margin-left: 10%;
+  padding-left:10px;
+  background-color: #ea0909;
+  border-radius: 3px;
+
+
+}
+
+
+
+.pasword-form{
+  margin-left:10%;
+  color: rgba(78, 74, 74, 0.845);
+  font-weight: bold;
+  font-size: 13px
+}
+.pasword-form:hover{
+  color: #4b9def;
+}
+button{
+  margin-left:20%;
+  height: 45px;
+  width: 250px;
+  position: relative;
+  margin-top: 10px;
+  color: #000000;
+  font-size: 15px;
+  padding: 14px;
+  text-decoration: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px #000000;
+  text-shadow: 1px 1px 0px #f7f7f7;
+  border: solid #048b07 1px;
+  background: #00b503;
+
+  }
+button:hover {
+  background: #80d96c;
+  border: solid #069708 0px;
+  }
+button:disabled {
+  background: #595a59;
+  border: solid #000000 0px;
+  color: #ffffff;
+}
+.Register-form{
+  margin-left:20%;
+  height: 45px;
+  width: 250px;
+  position: relative;
+
+  color: rgba(78, 74, 74, 0.845);
+  font-size: 14px;
+  display:flex;
+
+}
+.Register-text{
+  margin: auto;
+}
+.text{
+  color: #4b9def;
+  font-weight: bold;
+}
+
+.text:hover{
+  color: #097aeb;
+  font-weight: bold;
+}

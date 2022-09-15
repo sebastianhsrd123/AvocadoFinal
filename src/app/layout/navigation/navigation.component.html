@@ -1,0 +1,29 @@
+
+
+<div class="hr-navigation">
+  <div style="width:200px;">
+    <img src="./assets/ico/Avocado-ico.png" alt="" height="50">
+    <a href="#" class="hr-text">Av</a>
+  </div>
+    <div class="hr-search">
+        <input type="text" name="search" id="Search">
+        <button class="btn btn-primary hr-btn ">Search</button>
+    </div>
+
+    <div *ngIf="!sesion; else Sesion">
+        <button class="btn btn-primary hr-btn " routerLink="/auth/login">LogIn</button>
+        <button class="btn btn-primary hr-btn" routerLink="/auth/register">SignUp</button>
+    </div>
+
+</div>
+
+<ng-template #Sesion>
+  <div class="submited">
+    <form (ngSubmit)="dropSesion();"  style="display: flex;">
+    <a class="carrito" routerLink="/app/home/finish/bought"><img class="imagen" src="https://cdn-icons-png.flaticon.com/512/3394/3394009.png" alt="Carro de compras"></a>
+    <a class="name-sesion"> Hola {{nombre.name}}!</a>
+    <button type="submit"  class="name-sesion"> Cerrar sesion</button>
+    </form>
+
+</div>
+</ng-template>

@@ -1,0 +1,54 @@
+{
+    "products":
+    [
+        {
+            "id":1,
+            "avatar":"https://dam.cocinafacil.com.mx/wp-content/uploads/2018/07/beneficios-de-la-papa-1.jpg",
+            "Name": "Papa",
+            "Price": 127.20,
+            "Desc":" papa capira recien sacada de la tierra"
+        },
+        {
+            "id":2,
+            "avatar":"https://www.tododisca.com/wp-content/uploads/2020/12/queso-suizo-elemental-Sistema-Inmunologico.jpg",
+            "Name": "Queso",
+            "Price": 234.50,
+            "Desc":" papa capira recien sacada de la tierra"
+        },
+        {
+            "id":3,
+            "avatar":"https://static.diariofemenino.com/media/22740/consejos-conservar-yuca.jpg",
+            "Name": "Yuca",
+            "Price": 50,
+            "Desc":" papa capira recien sacada de la tierra"
+        },
+        {
+            "id":4,
+            "avatar":"https://canalcocina.es/medias/_cache/zoom-4bed8abde11408cd05cc83d68ba45945-920-518.jpg",
+            "Name": "Mazorca",
+            "Price": 300.20,
+            "Desc":" papa capira recien sacada de la tierra"
+        },
+        {
+            "id":5,
+            "avatar":"https://mui.kitchen/__export/1621526042573/sites/muikitchen/img/2021/05/20/image_3b20b684-def8-4b14-98e2-4d74a66cd5d1.jpg_118292745.jpg",
+            "Name": "Platano Verde",
+            "Price": 1200.10,
+            "Desc":" papa capira recien sacada de la tierra"
+        },
+        {
+            "id":6,
+            "avatar":"https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/01/platano-maduro-en-un-dia-sipa.jpg",
+            "Name": "Platano Amarillo",
+            "Price": 960.0,
+            "Desc":" papa capira recien sacada de la tierra"
+        },{
+            "id":7,
+            "avatar":"https://nutricionpractica.es/wp-content/uploads/2020/06/Imagen-Pl%C3%A1tano-verde-1135x758.jpg",
+            "Name": "Banano",
+            "Price": 450.25,
+            "Desc":" papa capira recien sacada de la tierra"
+        }
+
+    ]
+}
